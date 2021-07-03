@@ -1,18 +1,14 @@
-'use strict';
-
+'use strict'
 {
-  const open= document.getElementById('open');
-  const overlay = document.querySelector('.overlay');
-  const close = document.getElementById('close');
+  const btn = document.getElementById('btn')
+
+  btn.addEventListener('click',() => {
+    const uuu = ['１','２','３','4','5','6']
+    btn.textContent = uuu[Math.floor(Math.random() * uuu.length)];
+    btn.classList.toggle('kaitenn');
+    btn.classList.toggle('kaitenn1');
+
+  });
 
 
-open.addEventListener('click',() => {
-  overlay.classList.add('show');
-  open.classList.add('hide');
-});
-close.addEventListener('click',() => {
-  overlay.classList.remove('show');
-  open.classList.remove('hide');
-});
 }
-
